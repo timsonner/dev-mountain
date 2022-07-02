@@ -1,5 +1,5 @@
 // For problems 1-2 use the following lines of code:
-var arr = [10, 20, 30, 40, 50, 60]
+let arr = [10, 20, 30, 40, 50, 60]
 
 ////////// PROBLEM 1 //////////
 /*
@@ -7,21 +7,21 @@ var arr = [10, 20, 30, 40, 50, 60]
 */
 
 //Code Here
-var firstItem = arr[0]
+let firstItem = arr[0]
 
 ////////// PROBLEM 2 //////////
 /*
-  Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
+  Remove the last item from the 'arr' array and store it in a let named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
 
 //Code Here
-var lastItemRemoved = arr.pop() // Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+let lastItemRemoved = arr.pop() // Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 console.log(arr)
 
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
-var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
+let family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 // Do not edit the code above.
 
 /*
@@ -36,7 +36,7 @@ family.forEach(element => {
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
+let nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 let evensArr = []
 // Do not edit the code above.
 
@@ -54,7 +54,7 @@ nums.forEach(element => {
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var score = 74
+let score = 74
 // Do not edit the code above.
 
 /*
@@ -79,7 +79,7 @@ if (score >= 90) {
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
+let myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 // Do not edit the code above.
 
 /*
@@ -87,7 +87,7 @@ var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 */
 
 //Code Here
-var someNum = myFavoriteNumbers[4]
+let someNum = myFavoriteNumbers[4]
 
 ////////// PROBLEM 7 //////////
 
@@ -105,7 +105,7 @@ console.log(someNum)
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
-var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Do not edit the code above.
 
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
@@ -119,7 +119,7 @@ listOfNumbers.forEach(element => {
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
-var letters = ['A', 'B', 'C', 'D', 'E'];
+let letters = ['A', 'B', 'C', 'D', 'E'];
 // Do not edit the code above.
 
 /*

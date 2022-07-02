@@ -4,7 +4,7 @@
 const faveColors = ['red', 'green', 'black']
 
 //CODE HERE
-var colorCopy = faveColors.slice() // slice method with no parameters makes a copy of the array it was called on
+let colorCopy = faveColors.slice() // slice method with no parameters makes a copy of the array it was called on
 
 //////////////////PROBLEM 2////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
@@ -22,7 +22,7 @@ console.log(faveColors)
 const numbers = [1, 2, 3, 4, 5]
 
 //CODE HERE
-var middleNums = numbers.slice(1, 4) // basically don't inclued elements 1 or 4 but everything between
+let middleNums = numbers.slice(1, 4) // basically don't inclued elements 1 or 4 but everything between
 console.log(middleNums)
 
 //////////////////PROBLEM 4////////////////////
@@ -38,7 +38,7 @@ console.log(middleNums)
 const bigOrSmallArray = [1, 99, 42, 69, 102, -10, 159, 352]
 
 // CODE HERE
-var answers = []
+let answers = []
 bigOrSmallArray.forEach(element => {
   if (element > 100) {
     answers.push("big") // push() is "append"

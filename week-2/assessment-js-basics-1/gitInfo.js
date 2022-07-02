@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-var gitDefinition = "Git is a version control system used by software developers to track changes in source code. It provides diffs, and the ability to develop on branches. Its purpose is to make builds easier and allow collaberation between developers"
+const gitDefinition = "Git is a version control system used by software developers to track changes in source code. Its purpose is to make builds easier and allow collaberation between developers. It allows viewing of project history via snapshots."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -19,7 +19,7 @@ var gitDefinition = "Git is a version control system used by software developers
 */
 
 //CODE HERE
-var gitHubDefinition = "GitHub is an online SaaS provider offering storage and tools to developers"
+const gitHubDefinition = "GitHub is an online SaaS provider offering storage and tools to developers. It's built around the Git protocol."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -28,7 +28,7 @@ var gitHubDefinition = "GitHub is an online SaaS provider offering storage and t
 */
 
 //CODE HERE
-var gitInit = `'git init' initializes a directory for version control, it gets a directory ready to be used with the Git protocol.`
+const gitInit = `'git init' initializes a directory for version control, it gets a directory ready to use the Git protocol.`
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -37,7 +37,8 @@ var gitInit = `'git init' initializes a directory for version control, it gets a
 */
 
 //CODE HERE
-var gitCloneDefinition = `Cloning is copying a remote repository to the local filesystem. It enables developers to have a local repo of a remote repo.`
+const gitCloneDefinition = `Cloning is copying a remote repository to the local filesystem. It enables developers to have a local repo of a remote repo.`
+
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -45,7 +46,8 @@ var gitCloneDefinition = `Cloning is copying a remote repository to the local fi
 */
 
 //CODE HERE
-var gitStatusDefinition = ``
+const gitStatusDefinition = `'git status' displays the staging area and the state of the working directory. It shows which changes have been staged, which haven't, and which files are being tracked.`
+
 //////////////////PROBLEM 6////////////////////
 /*
     Create a variable called 'gitAddDefinition'.  
@@ -56,6 +58,7 @@ var gitStatusDefinition = ``
 */
 
 //CODE HERE
+const gitAddDefinition = `'git add' adds files to the staging area, it says 'this file is going in the next commit.'`
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -67,6 +70,8 @@ var gitStatusDefinition = ``
 */
 
 //CODE HERE
+const gitCommitDefinition = `'git commit' creates a snapshot of the working directory, it says all the files being tracked in the staging are ready to be pushed.`
+const gitCommitCode = `git commit -m "initial commit"`
 
 
 //////////////////PROBLEM 8////////////////////
@@ -76,3 +81,4 @@ var gitStatusDefinition = ``
 */
 
 //CODE HERE
+const gitPushDefinition = `'git push' sends the committed files to the remote repo and branch specified.`
