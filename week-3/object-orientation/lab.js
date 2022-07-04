@@ -401,7 +401,7 @@ class Vehicle {
 */
 
 //Code Here
-const myFirstVehicle = new Vehicle(5, `Primer Black`, 300000)
+const myFirstVehicle = new Vehicle(5, `Primer Black`, 300000);
 console.log(myFirstVehicle);
 
 /* 
@@ -415,12 +415,12 @@ console.log(myFirstVehicle);
 //Code Here
 class Motorcycle extends Vehicle {
   constructor(capacity, color, mileage, make, isCool) {
-    super(2, `red`, 4500)
-    this.capacity = capacity
-    this.color = color
-    this.mileage = mileage
-this.make = make
-this.isCool = isCool
+    super(2, `red`, 4500);
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
+    this.make = make;
+    this.isCool = isCool;
   }
 }
 
@@ -429,12 +429,12 @@ this.isCool = isCool
 */
 
 //Code Here
-const myFirstMotorcycle = new Motorcycle(1, `blue`, 1200, `Huffy`, false)
+const myFirstMotorcycle = new Motorcycle(1, `blue`, 1200, `Huffy`, false);
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
-myFirstMotorcycle.move(35)
+myFirstMotorcycle.move(35);
 /*
   Let's make another class based off of Vehicle. 
 
@@ -454,26 +454,28 @@ myFirstMotorcycle.move(35)
 //Code Here
 class Boat extends Vehicle {
   constructor(capacity, color, mileage, name, type, seaWorthy) {
-super(1, `red`, 300)
-this.capacity = capacity
-    this.color = color
-    this.mileage = mileage
-this.name = name
-this.type = type
-this.seaWorthy = seaWorthy
+    super(1, `red`, 300);
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
+    this.name = name;
+    this.type = type;
+    this.seaWorthy = seaWorthy;
   }
 
   checkSeaworthiness() {
-if (this.seaWorthy) {
-console.log(`The ${this.color} ${this.type} '${this.name}' is seaworthy!`)
-} else {
-console.log(`You need to get your ${this.type} in shape!`)
-}
+    if (this.seaWorthy) {
+      console.log(
+        `The ${this.color} ${this.type} '${this.name}' is seaworthy!`
+      );
+    } else {
+      console.log(`You need to get your ${this.type} in shape!`);
+    }
   }
 
-performMaintenance() {
-  this.seaWorthy = true
-}
+  performMaintenance() {
+    this.seaWorthy = true;
+  }
 }
 
 /*
@@ -482,25 +484,25 @@ performMaintenance() {
 */
 
 //Code Here
-const myFirstBoat = new Boat(1, `green`, 300, `The barnacle`, `Kayak`, false)
+const myFirstBoat = new Boat(1, `green`, 300, `The barnacle`, `Kayak`, false);
 
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
-myFirstBoat.checkSeaworthiness()
+myFirstBoat.checkSeaworthiness();
 
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here
-myFirstBoat.performMaintenance()
+myFirstBoat.performMaintenance();
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
-myFirstBoat.checkSeaworthiness()
+myFirstBoat.checkSeaworthiness();

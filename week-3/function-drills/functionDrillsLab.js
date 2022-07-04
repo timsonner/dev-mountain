@@ -12,7 +12,7 @@
 
 //CODE HERE
 function helloWorld() {
-  console.log('Hello, World!')
+  console.log("Hello, World!");
 }
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -22,8 +22,8 @@ function helloWorld() {
 */
 
 //CODE HERE
-const jsNinja = () => 'I am a JavaScript ninja!'
-console.log(jsNinja())
+const jsNinja = () => "I am a JavaScript ninja!";
+console.log(jsNinja());
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -34,9 +34,9 @@ console.log(jsNinja())
 
 //CODE HERE
 function printName(name) {
-  console.log(name)
+  console.log(name);
 }
-printName(`Korben Dallas`)
+printName(`Korben Dallas`);
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -50,9 +50,9 @@ printName(`Korben Dallas`)
 
 //CODE HERE
 function greeting(name) {
-console.log(`Hello, ${name}`)
+  console.log(`Hello, ${name}`);
 }
-greeting(`Jake`)
+greeting(`Jake`);
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -67,9 +67,9 @@ greeting(`Jake`)
 
 //CODE HERE
 const compareNums = (n1, n2) => {
-  return n1 === n2 ? n1 : Math.max(n1, n2)
-}
-console.log(compareNums(3, 3))
+  return n1 === n2 ? n1 : Math.max(n1, n2);
+};
+console.log(compareNums(3, 3));
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -81,10 +81,10 @@ console.log(compareNums(3, 3))
 
 //CODE HERE
 function add(n1, n2) {
-  return parseInt(n1) + parseInt(n2)
+  return parseInt(n1) + parseInt(n2);
 }
-const sum = add(40, 2)
-console.log(sum)
+const sum = add(40, 2);
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -99,7 +99,7 @@ const exclaim = function (str) {
 
 // console.log('arrow')
 // console.log('declaration')
-console.log('expression')
+console.log("expression");
 
 ////////////////// PROBLEM 8 ////////////////////
 
@@ -112,7 +112,7 @@ const exclaimTwo = (str) => {
   return str.toUpperCase() + "!!!";
 };
 
-console.log('arrow')
+console.log("arrow");
 // console.log('declaration')
 // console.log('expression')
 
@@ -123,9 +123,9 @@ console.log('arrow')
   Brownie points if you use a template string
 */
 
-const exclaimThree = str => `${str.toUpperCase()}` + "!!!"
-// const exclaimThree = str => `${str.toUpperCase().concat(`!!!`)}` 
-console.log(exclaimThree("fooBarBaz"))
+const exclaimThree = (str) => `${str.toUpperCase()}` + "!!!";
+// const exclaimThree = str => `${str.toUpperCase().concat(`!!!`)}`
+console.log(exclaimThree("fooBarBaz"));
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -139,7 +139,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-console.log('declaration')
+console.log("declaration");
 // console.log('expression')
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -154,9 +154,9 @@ console.log('declaration')
 //CODE HERE
 function nameCheck(name) {
   switch (name) {
-    case 'Steven':
+    case "Steven":
       return "What is up Steven?";
-    case 'Bryan':
+    case "Bryan":
       return "Hey Bryan!";
     default:
       return `Cool name, ${name}`;
@@ -189,7 +189,7 @@ function faveColorFinder(color) {
   }
 }
 const colorRating = faveColorFinder(`taupe`);
-console.log(colorRating)
+console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
