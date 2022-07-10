@@ -141,5 +141,4 @@ this.creditCard = creditCard
 }
 
 const customer = new Customer(`Gordon Freeman`, new PhoneNumber(1,425,889,9642), `Black Mesa Research Facility, Undisclosed Location, NM 55555`, `PO BOX 1688 Bellevue, WA 98009`, `gordonf@valvesoftware.com`, `head crabs`, new CreditCard(1111, 2222, 3333, 4444, 555))
-
-console.log(customer.creditCard.typeOfCard())
+console.log(customer)
