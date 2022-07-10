@@ -22,10 +22,8 @@
 */
 
 //CODE HERE
-
-
-
-
+const greetUser = username => `Welcome back, ${username}`
+console.log(greetUser(`Foo`))
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -50,8 +48,11 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
-
+function canWeDeliver(zipcode) {
+    return deliveryAreaZipCodes.includes(zipcode)
+}
+console.log(canWeDeliver(85213)) // true
+console.log(canWeDeliver(88888)) // false
 
 /* 
     Problem 2 Continued
@@ -71,7 +72,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-
+function canWeDeliverTwo(zipcode) {
+isZipcodeDeliverable = false
+    deliveryAreaZipCodes.forEach(element => {
+        if (element === zipcode) {
+            isZipcodeDeliverable = true
+        }
+    });
+    return isZipcodeDeliverable
+}
+console.log(canWeDeliverTwo(88888)) // false
+console.log(canWeDeliverTwo(85204)) // true
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,8 +118,8 @@ const deals = [
 */
 
 //CODE HERE
-
-
+deals[0].title = deals[0].title.replace(15, 10)
+console.log(deals[0].title)
 
 /*
     The restaurant is going to continue its
@@ -124,3 +135,20 @@ const deals = [
 */
 
 //CODE HERE
+// Easy way:
+deals[1].desc = deals[1].desc.replace(`March`, `April`).trim()
+console.log(deals[1].desc)
+
+// Wonky way:
+// deals[1].desc = deals[1].desc.replace(`   `, ``)
+// deals[1].desc = deals[1].desc.replace(`! `, `!`)
+
+// Overkill way:
+// deals[1].desc = deals[1].desc.replace(/\s+/g, ` `).trim()
+
+/* 
+    '/s' matches any whitespace symbol: spaces, tabs, and line breaks
+    '+' match one or more of the preceding tokens (\s)
+    '/g' means global, reaplaces all matches
+    .trim() method removes whitespace from both ends of a string
+*/
