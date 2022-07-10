@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,8 +30,20 @@
 */
 
 //CODE HERE
-
-
+class MenuItem {
+  constructor(name, price, category, popularity, rating, tags) {
+    this.name = name;
+    this.price = price;
+    this.category = category;
+    this.popularity = popularity;
+    this.rating = rating;
+    this.tags = tags;
+  }
+}
+const pizza = new MenuItem(`pizza`, 19.0, `entree`, 4, 5, [
+  `vegetarian`,
+  `gluten-free`,
+]);
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +54,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +64,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +74,8 @@
 */
 
 //CODE HERE
-
+const { price } = { price: pizza.price };
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +85,8 @@
 */
 
 //CODE HERE
-
+const { category } = { category: pizza.category };
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +101,21 @@
 */
 
 //CODE HERE
-
-
+const foodArr = [
+  new MenuItem(`caesar salad`, 10.0, `appetizer`, 1, 2, [
+    `organic`,
+    `low carb`,
+  ]),
+  new MenuItem(`calamari`, 11.0, `appetizer`, 2, 3, [`local`, `fried`]),
+  new MenuItem(`tiramisu`, 12.0, `dessert`, 3, 4, [`coffee`, `cheese`]),
+  new MenuItem(`grilled vegetable risotto`, 18.0, `entree`, 4, 5, [
+    `seasonal`,
+    `gluten-free`,
+  ]),
+  new MenuItem(`bison carpaccio`, 13.0, `appetizer`, 5, 4, [`local`, `raw`]),
+];
+console.log(`foodArr:`);
+console.log(foodArr[0]);
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +131,11 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+const filteredFood = foodArr.filter((element) =>
+  element.tags.includes(`local`)
+);
+console.log(`filteredFood:`);
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +177,35 @@
 */
 
 //CODE HERE
+// property: rating, popularity, or price
+// number: number to compare against
+// type: above or below
+function filterByProperty(property, number, type) {
+  let filteredArray = [];
 
+  function callback(element, property) {
+    if (property === `rating`) {
+      return element.rating;
+    } else if (property === `popularity`) {
+      return element.popularity;
+    } else if (property === `price`) {
+      return element.price;
+    }
+  }
+
+  if (type === `above`) {
+    filteredArray = foodArr.filter(
+      (element) => callback(element, property) > number
+    );
+    console.log(`Returning items with ${property} ${type} ${number}`);
+  } else if (type === `below`) {
+    filteredArray = foodArr.filter(
+      (element) => callback(element, property) < number
+    );
+    console.log(`Returning items with ${property} ${type} ${number}`);
+  }
+  return filteredArray;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +215,9 @@
 */
 
 //CODE HERE
+console.log(filterByProperty(`popularity`, 3, `above`));
+console.log(filterByProperty(`popularity`, 3, `below`));
+console.log(filterByProperty(`rating`, 4, `above`));
+console.log(filterByProperty(`rating`, 3, `below`));
+console.log(filterByProperty(`price`, 12, `above`));
+console.log(filterByProperty(`price`, 11, `below`));
