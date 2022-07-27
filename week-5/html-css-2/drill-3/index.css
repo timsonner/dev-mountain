@@ -1,0 +1,61 @@
+.vstack {
+    display: flex;
+flex-direction: column;
+margin: 0px;
+}
+.row {
+    height: 225px;
+    border: 1px solid black;
+}
+#row-1 {
+    height: 125px;
+    background-color: lightgray;
+}
+#r1-item-1 {
+    width: 75px;
+    height: 75px;
+    background-color: rgb(89, 143, 218);
+    margin: 25px;
+}
+#row-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    height: fit-content;
+}
+p {
+    margin: 0px;
+}
+#row-3 {
+    background-color: rgb(89, 143, 218);
+}
+#row-4 {
+    background-color: rgb(120, 224, 196);
+}
+#row-5 {
+    background-color: rgb(193, 231, 150);
+}
+#row-6 {
+    background-color: rgb(245, 231, 94);
+}
+#question-box {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    clip-path: circle();
+    position: fixed;
+    bottom: 1px;
+    right: 0px;
+    margin-right: 21px;
+    margin-bottom: 11px;
+    align-items: center;
+    justify-content: center;
+}
