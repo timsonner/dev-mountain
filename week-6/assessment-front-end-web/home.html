@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <ol>
+        <li class="crumb"><a href="./home.html">Home</a></li>
+        <li class="crumb"><a href="./profile.html">Profile</a></li>
+        <li class="crumb"><a href="./about.html">About</a></li>
+      </ol>
+    </nav>
+
+    <content>
+      <h1>Welcome to this little website.</h1>
+      <p>Hello World</p>
+      <!-- insert hello world here -->
+
+      <img src="image/pandora-kitty.jpeg" />
+      <p>
+        We offer an assortment of quality services to make you smile and
+        consider the real purpose of life. Our dedicated and experienced
+        professionals specialize in cat photography, targeted compliments, and
+        web contact forms.
+      </p>
+      <ul>
+        <li>You're pretty</li>
+        <li>You're handsome</li>
+        <li>You're smart</li>
+      </ul>
+
+      <h2>Contact Us</h2>
+      <form id="contact">
+        Your name:
+        <input type="text" />
+
+        Message:
+        <input type="textarea" />
+
+        <form id="survey">
+          How'd you hear about us?
+          <div class="survey-div">
+            <input type="checkbox" id="google" name="google" />
+            <label for="google">Google</label>
+          </div>
+
+          <div class="survey-div">
+            <input type="checkbox" id="friend" name="friend" />
+            <label for="friend">A friend</label>
+          </div>
+          <div class="survey-div">
+            <input type="checkbox" id="other" name="other" />
+            <label for="other">Other</label>
+          </div>
+        </form>
+
+        <input type="submit" />
+      </form>
+    </content>
+
+    <script src="about.js"></script>
+  </body>
+</html>
