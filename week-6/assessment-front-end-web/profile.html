@@ -1,6 +1,68 @@
-Not implemented yet! 
+<!-- Not implemented yet!  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <ol>
+        <li class="crumb"><a href="./home.html">Home</a></li>
+        <li class="crumb"><a href="./profile.html">Profile</a></li>
+        <li class="crumb"><a href="./about.html">About</a></li>
+        <li class="crumb"><a href="./neighborhood.html">Neighborhood</a></li>
+      </ol>
+    </nav>
+    <content>
+      <!-- The profile should feature your skills, interests, and career goals. Be creative and try practice using basic HTML elements like headings, paragraphs, lists, and forms, as well as CSS concepts such as classes and flexbox. -->
+      <button id="color" class="yellow-button">My Favorite Color</button>
+      <button id="place" class="yellow-button">My Favorite Place</button>
+      <button id="ritual" class="yellow-button">My Favorite Ritual</button>
 
-<br>
-<br>
+      <h1 class="heading-skills">Skills</h1>
+      <ul class="ul-no-bullets">
+        <li class="italic">Swift, SwiftUI</li>
+        <li class="oblique">Javascript, HTML, CSS</li>
+        <li class="bold">Node, Express, SvelteKit</li>
+        <li class="li-purple">PostgreSQL, Supabase, Vercel</li>
+      </ul>
 
-<a href="./home.html"><< Back </a>
+      <h2>Interests</h2>
+      <p class="blinking">
+        Software development, nature, information security, pentesting, coffee,
+        hot springs, history, warfare, social engineering.
+      </p>
+
+      <h3>Career goals</h3>
+      <section class="section-career">
+        <div>Get paid to develop software</div>
+        <div>
+          Work remotely so I can live anywhere based on war, climate, weather,
+          availability of food, shelter, and water.
+        </div>
+        <div>
+          Make myself useful by being adaptable to any and all situations that
+          may occur in the future.
+        </div>
+      </section>
+
+      <h4>Comment</h4>
+      <form id="form-comment">
+        <div></div>
+        <textarea
+          name="textarea-comment"
+          id="textarea-comment"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" />
+      </form>
+
+      <br />
+      <br />
+      <a href="./home.html"><< Back </a>
+    </content>
+    <script src="profile.js"></script>
+  </body>
+</html>

@@ -40,3 +40,48 @@ img {
 	display: flex;
 	gap: .4rem;
 }
+
+.yellow-button {
+	width: 100px;
+	height: 40px;
+	background-color: yellow;
+}
+.heading-skills {
+	color: blueviolet;
+	background-color: aquamarine;
+}
+.ul-profile {
+	color: red;
+}
+.italic {
+	font-style: italic
+}
+.oblique {
+	font-style: oblique;
+}
+.bold {
+	font-weight: bold;
+}
+.li-purple {
+	color: blueviolet;
+}
+.blinking {
+	animation: blinker 4s linear infinite;
+  }
+  
+  @keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+  }
+
+  .section-career {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	align-content: space-around;
+  }
+  .ul-no-bullets {
+	list-style: none;
+  }
+  
