@@ -1,10 +1,9 @@
 // this file is where the frontend makes calls  to the routes or endpoints
-
-const baseURL = `http://localhost:4000/api/goals`
+const goalsURL = `http://localhost:4000/api/goals`
 
 const getAllGoals = async () => {
   try {
-    let res = await axios.get(baseURL)
+    let res = await axios.get(goalsURL)
     res.data.forEach((element) => {
       createGoalView(element)
     })
@@ -16,7 +15,7 @@ const getAllGoals = async () => {
 
 const postGoal = async (object) => {
   try {
-    const res = await axios.post(baseURL, object)
+    const res = await axios.post(goalsURL, object)
     console.log(`🟢 postGoal()`)
   } catch (error) {
     console.log(`🔴 postGoal(): ${error}`)
@@ -39,7 +38,7 @@ const helperPostGoal = () => {
 
 const putGoal = async (id, text) => {
   try {
-    const url = baseURL + '/' + id
+    const url = goalsURL + '/' + id
     const res = await axios.put(url, { text: text })
     console.log(`🟢 putGoal()`)
   } catch (error) {
@@ -49,7 +48,7 @@ const putGoal = async (id, text) => {
 }
 const delGoal = async (id) => {
   try {
-    const url = baseURL + '/' + id
+    const url = goalsURL + '/' + id
     const res = await axios.delete(url, id)
     console.log(`🟢 removeGoal()`)
   } catch (error) {
@@ -61,7 +60,7 @@ const delGoal = async (id) => {
 const docBody = document.querySelector('body')
 const section = document.createElement('section')
 docBody.appendChild(section)
-const heading = document.createElement('header')
+const heading = document.createElement('h2')
 heading.textContent = 'Goals List'
 section.appendChild(heading)
 const inputAddGoal = document.createElement('input')
@@ -70,6 +69,10 @@ const buttonAddGoal = document.createElement('button')
 buttonAddGoal.textContent = 'Add a goal'
 buttonAddGoal.addEventListener('click', helperPostGoal)
 section.appendChild(buttonAddGoal)
+section.style.display = 'flex'
+section.style.flexDirection = 'column'
+section.style.alignItems = 'center'
+
 // listen for 'enter' key for submit
 inputAddGoal.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
