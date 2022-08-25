@@ -1,4 +1,26 @@
+require('dotenv').config()
 
+// const { connectionString } = process.env.CONNECTION_STRING
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
+    dialectOptions: {
+      ssl: {
+        // require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
+);
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('🟢 sequelize.authenticate()');
+  })
+  .catch(err => {
+    console.error('🔴 sequelize.authenticate():', err);
+  });
 
 module.exports = {
     seed: (req, res) => {
@@ -10,8 +32,15 @@ module.exports = {
                 country_id serial primary key, 
                 name varchar
             );
+            -- country_id: integer should match a country_id from the countries table.
 
-            *****YOUR CODE HERE*****
+            CREATE TABLE cities (
+                city_id SERIAL PRIMARY KEY, 
+                name varchar, 
+                rating int, 
+                country_id int,
+                FOREIGN KEY (country_id) REFERENCES countries(country_id)
+            );
 
             insert into countries (name)
             values ('Afghanistan'),
@@ -209,6 +238,14 @@ module.exports = {
             ('Yemen'),
             ('Zambia'),
             ('Zimbabwe');
+
+            -- Extra credit:
+            -- USA country_id is 187
+            
+            INSERT INTO cities(name, rating, country_id) VALUES ('Missoula', 9, 187);
+            INSERT INTO cities(name, rating, country_id) VALUES ('Darby', 8, 187);
+            INSERT INTO cities(name, rating, country_id) VALUES ('Sula', 10, 187); 
+
         `).then(() => {
             console.log('DB seeded!')
             res.sendStatus(200)
