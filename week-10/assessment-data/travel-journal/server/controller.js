@@ -21,7 +21,19 @@ sequelize
     console.error('🔴 sequelize.authenticate():', err)
   })
 
+// cities: city_id, name (alias ‘city), rating. countries: country_id, name (alias ‘country’). Make sure to spellcheck the aliases as well as the column names. Join the tables where country_id is equal.
 module.exports = {
+    getCities: (req, res) => {    
+        sequelize
+            .query(`SELECT city_id, cities.name AS city, rating, countries.country_id, countries.name AS country FROM countries INNER JOIN cities ON cities.country_id = countries.country_id ORDER BY rating DESC;
+            `)
+          .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+            console.log('🟢 getCities()')
+          })
+          .catch((err) => console.log('🔴 getCities():', err))
+    },
+    
   deleteCity: (req, res) => {    
     sequelize
       .query(`DELETE FROM cities WHERE country_id = ${req.params.id};`)
