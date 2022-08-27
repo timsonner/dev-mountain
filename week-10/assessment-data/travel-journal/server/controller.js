@@ -1,45 +1,64 @@
 require('dotenv').config()
 
 // const { connectionString } = process.env.CONNECTION_STRING
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
-    dialectOptions: {
-      ssl: {
-        // require: true,
-        rejectUnauthorized: false
-      }
-    }
-  }
-);
+  dialectOptions: {
+    ssl: {
+      // require: true,
+      rejectUnauthorized: false,
+    },
+  },
+})
 
 sequelize
   .authenticate()
   .then(() => {
-    console.log('🟢 sequelize.authenticate()');
+    console.log('🟢 sequelize.authenticate()')
   })
-  .catch(err => {
-    console.error('🔴 sequelize.authenticate():', err);
-  });
+  .catch((err) => {
+    console.error('🔴 sequelize.authenticate():', err)
+  })
 
 module.exports = {
-    createCity: (req, res) => {
-        const {name, rating, countryId} = req.body
-        sequelize.query(`INSERT INTO cities(name, rating, country_id) VALUES ('${name}', ${rating}, ${countryId});`).then((dbRes) => {
-            res.status(200).send(dbRes[0])
-            console.log('🟢 createCity()')
-        }).catch(err => console.log('🔴 createCity()', err))
-    },
-    
-    getCountries: (req, res) => {
-sequelize.query(`SELECT * FROM countries;`).then((dbRes) => {
-    res.status(200).send(dbRes[0])
-    console.log('🟢 getCountries()')
-}).catch(err => console.log('🔴 getCountries', err))
-    },
+  deleteCity: (req, res) => {    
+    sequelize
+      .query(`DELETE FROM cities WHERE country_id = ${req.params.id};`)
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+        console.log('🟢 deleteCity()')
+      })
+      .catch((err) => console.log('🔴 deleteCity():', err))
+  },
 
-    seed: (req, res) => {
-        sequelize.query(`
+  createCity: (req, res) => {
+    const { name, rating, countryId } = req.body
+    sequelize
+      .query(
+        `INSERT INTO cities(name, rating, country_id) VALUES ('${name}', ${rating}, ${countryId});`
+      )
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+        console.log('🟢 createCity()')
+      })
+      .catch((err) => console.log('🔴 createCity()', err))
+  },
+
+  getCountries: (req, res) => {
+    sequelize
+      .query(`SELECT * FROM countries;`)
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+        console.log('🟢 getCountries()')
+      })
+      .catch((err) => console.log('🔴 getCountries', err))
+  },
+
+  seed: (req, res) => {
+    sequelize
+      .query(
+        `
             drop table if exists cities;
             drop table if exists countries;
 
@@ -261,9 +280,12 @@ sequelize.query(`SELECT * FROM countries;`).then((dbRes) => {
             INSERT INTO cities(name, rating, country_id) VALUES ('Darby', 8, 187);
             INSERT INTO cities(name, rating, country_id) VALUES ('Sula', 10, 187); 
 
-        `).then(() => {
-            console.log('DB seeded!')
-            res.sendStatus(200)
-        }).catch(err => console.log('error seeding DB', err))
-    }
+        `
+      )
+      .then(() => {
+        console.log('DB seeded!')
+        res.sendStatus(200)
+      })
+      .catch((err) => console.log('error seeding DB', err))
+  },
 }
