@@ -23,6 +23,13 @@ sequelize
   });
 
 module.exports = {
+    getCountries: (req, res) => {
+sequelize.query(`SELECT * FROM countries;`).then((dbRes) => {
+    res.status(200).send(dbRes[0])
+    console.log('🟢 getCountries()')
+}).catch(err => console.log('🔴 getCountries', err))
+    },
+
     seed: (req, res) => {
         sequelize.query(`
             drop table if exists cities;
