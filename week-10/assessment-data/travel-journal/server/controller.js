@@ -288,9 +288,9 @@ module.exports = {
             -- Extra credit:
             -- USA country_id is 187
             
-            INSERT INTO cities(name, rating, country_id) VALUES ('Missoula', 9, 187);
-            INSERT INTO cities(name, rating, country_id) VALUES ('Darby', 8, 187);
-            INSERT INTO cities(name, rating, country_id) VALUES ('Sula', 10, 187); 
+            INSERT INTO cities(name, rating, country_id) VALUES ('Missoula', 3, 187);
+            INSERT INTO cities(name, rating, country_id) VALUES ('Darby', 4, 187);
+            INSERT INTO cities(name, rating, country_id) VALUES ('Sula', 5, 187); 
 
         `
       )
