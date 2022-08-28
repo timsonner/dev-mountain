@@ -36,7 +36,7 @@ module.exports = {
     
   deleteCity: (req, res) => {    
     sequelize
-      .query(`DELETE FROM cities WHERE country_id = ${req.params.id};`)
+      .query(`DELETE FROM cities WHERE city_id = ${req.params.id};`)
       .then((dbRes) => {
         res.status(200).send(dbRes[0])
         console.log('🟢 deleteCity()')
