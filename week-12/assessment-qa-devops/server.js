@@ -37,9 +37,10 @@ app.get('/', (req, res) => {
         res.sendStatus(400)
     }
 })
+
 app.get('/api/robots', (req, res) => {
     try {
-        res.status(200).send(botsArr) // BUG: should be 'bots' not 'botsArr'
+        res.status(200).send(bots)
     } catch (error) {
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
@@ -80,7 +81,7 @@ app.post('/api/duel', (req, res) => {
             playerRecord.losses++
             res.status(200).send('You lost!')
         } else {
-            playerRecord.losses++
+            playerRecord.wins++  
             res.status(200).send('You won!')
         }
     } catch (error) {
