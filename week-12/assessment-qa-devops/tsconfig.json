@@ -4,6 +4,7 @@
     },
     "files": [
         "functions.test.ts",
-        "duelDuo.test.ts"
+        "duelDuo.test.ts",
+        "endpoints.test.ts"
     ]
 }
