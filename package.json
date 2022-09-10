@@ -1,0 +1,5 @@
+{
+"scripts": {
+    "start": "node week-12/server.js"
+  }
+}
