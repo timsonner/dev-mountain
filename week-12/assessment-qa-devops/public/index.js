@@ -16,6 +16,7 @@ const compDuoHeader = document.querySelector('#comp-duo-header')
 let choices = []
 let compDuo = []
 let playerDuo = []
+let isShowingAllBots = false  // turns true on first click of 'Show all bots.'
 
 duelBtn.classList.add('hide')
 playAgainBtn.classList.add('hide')
@@ -155,6 +156,8 @@ const reset = () => {
     renderPlayerDuo()
     drawBtn.classList.remove('hide')
     compDuoHeader.classList.add('hide')
+    allBotsDiv.innerHTML = '' // add here to not show all bots on reload
+    isShowingAllBots = false
 }
 
 const getPlayerStats = () => {
@@ -166,15 +169,20 @@ const getPlayerStats = () => {
 }
 
 const getAllBots = () => {
-    axios.get('/api/robots')
-        .then(({data}) => {
-            allBotsDiv.innerHTML = ''
+    isShowingAllBots = !isShowingAllBots
+    if (isShowingAllBots) {
+        axios.get('/api/robots')
+            .then(({ data }) => {
+                allBotsDiv.innerHTML = ''
         
-            data.forEach(bot => {
-                let botHtml = makeRobotDisplayCard(bot)
-                allBotsDiv.innerHTML += botHtml
+                data.forEach(bot => {
+                    let botHtml = makeRobotDisplayCard(bot)
+                    allBotsDiv.innerHTML += botHtml
+                })
             })
-        })
+    } else {
+        allBotsDiv.innerHTML = ''
+    }
 }
 
 drawBtn.addEventListener('click', drawFive)
