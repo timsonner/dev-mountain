@@ -1,0 +1,9 @@
+name,time,words,preciseWords,verboseWords
+doublerAppend(tinyArray),0.006271,6.27 μs,6.271 μs,6 microseconds 271 nanoseconds
+doublerInsert(tinyArray),0.005007,5.01 μs,5.007 μs,5 microseconds 7 nanoseconds
+doublerAppend(smallArray),0.005607,5.61 μs,5.607 μs,5 microseconds 607 nanoseconds
+doublerInsert(smallArray),0.008661,8.66 μs,8.661 μs,8 microseconds 661 nanoseconds
+doublerAppend(largeArray),0.41876199999999997,419 μs,418.762 μs,418 microseconds 762 nanoseconds
+doublerInsert(largeArray),6.429976,6.43 ms,6.429976 ms,6 milliseconds 429 microseconds 976 nanoseconds
+doublerAppend(extraLargeArray),4.183587999999999,4.18 ms,4.183588 ms,4 milliseconds 183 microseconds 588 nanoseconds
+doublerInsert(extraLargeArray),721.15427,721 ms,721.15427 ms,721 milliseconds 154 microseconds 270 nanoseconds
