@@ -61,23 +61,29 @@ console.log('Results for the extraLargeArray');
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
 
-console.log(resultsInsert)
-
-
+/**
+ * A way to display an object with all it's properties to the console
+ */
 // const util = require('util')
-// console.log(util.inspect(foo, {showHidden: false, depth: null, colors: true}))
+// console.log(util.inspect(fooObject, {showHidden: false, depth: null, colors: true}))
+// // alternative syntax
+// console.log(util.inspect(fooObject, false, null, true))
 
-// // alternative shortcut
-// console.log(util.inspect(output, false, null, true /* enable colors */))
+/**
+ * A function to perform runtime analysis on a given function.
+ * Results are agregated into an array (arrayOfResults).
+ * I like the verbose output of perf, the examples above only exposed the 'preciseWords' property and I find the values of the 'time' 
+ * property very valuable for comparison.
+ */
 
 let arrayOfResults = []
 
+// takes three parameters, a funtion, an array, and a string
 const performAnalysis = (functionToTest, parameters, parameterName) => {
-    console.log()
-    perf.start()
-    functionToTest(parameters)
-    let output = perf.stop() // output becomes an object
-    output.name = `${functionToTest.name}(${parameterName})`
+    perf.start() // start the timer
+    functionToTest(parameters) // our parameters in action
+    let output = perf.stop() // stop the timer. output becomes an object
+    output.name = `${functionToTest.name}(${parameterName})` // this property defaults to 'default' if you don't set it, string parameter used here
     arrayOfResults.push(output) // push object to array
 }
 
@@ -92,6 +98,9 @@ performAnalysis(doublerInsert, extraLargeArray, "extraLargeArray")
 
 console.table(arrayOfResults)
 
+/**
+ * A function to convert an array of objects to CSV format
+ */
 function convertToCSV(arrayOfObjects) {
     const contentsOfCSV = [Object.keys(arrayOfObjects[0])].concat(arrayOfObjects)
   
@@ -99,15 +108,23 @@ function convertToCSV(arrayOfObjects) {
       return Object.values(item).toString()
     }).join('\n')
 }
-  
 // console.log(convertToCSV(arrayOfResults))
+
+/**
+ * A function to write files to disk
+ * Flags:
+ * r+ read/write
+ * w+ read/write, start at the beginning of the file. File is created if it does't exist
+ * a write, start at the end of the file. File is created if it doesn't exist. 
+ * a+ read/write, start at the end of the file. File is created if it doesn't exist
+ */
 
 const fs = require('fs/promises');
 
 async function writeFileToDisk(fileName, content) {
         try {
             fs.writeFile(fileName, content, { flag: 'a+' }, err => {
-                console.log(`error writing file ${err}`)
+                console.log(`Error writing file ${err}`) // the a+ flag is one of many options
             });
             console.log(`Success!`)
         } catch (err) {
@@ -115,7 +132,9 @@ async function writeFileToDisk(fileName, content) {
           }
 }
 
-
+/**
+ * A function to get user input from the console
+ */
 const readline = require('readline')
 
 const rl = readline.createInterface({
@@ -123,10 +142,11 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
-let exit = false 
-
+/**
+ * This question gives the user an oportunity to export as CSV or exit
+ */
 const firstQuestion = () => {
-    rl.question(`would you like to export these results as a CSV file? (y/n) `, (answer) => {
+    rl.question(`Would you like to export these results as a CSV file? (y/n) `, (answer) => {
         if (answer == 'y') {
             secondQuestion()
         } else if (answer == 'n'){
@@ -139,14 +159,18 @@ const firstQuestion = () => {
     })
 }
 
-
+/**
+ * This question enables the user to provide a filename for export and calls a function to convert an array of objects to CSV, then calls
+ * another function to write that CSV to disk. 
+ * User is also given the oportunity to exit.
+ */
 const secondQuestion = () => {
     rl.question("Give a name and path for the file. example: ./foo.csv or /dev/nul/foo.csv ", (fileName) => {
         rl.question(`You entered ${fileName} is this correct? (y/n) `, answer => {
             if (answer == 'y') {
                 console.log(`Attempting to write ${fileName} to disk...`)
-                const fileContents = convertToCSV(arrayOfResults)
-                writeFileToDisk(fileName, fileContents)
+                const fileContents = convertToCSV(arrayOfResults) // call function to convert the array of objects to CSV format
+                writeFileToDisk(fileName, fileContents) // call function to write the CSV file to disk
                 rl.close()
             } else if (answer == 'n'){
                 console.log('exiting...')
