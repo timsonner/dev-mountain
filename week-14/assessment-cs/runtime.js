@@ -71,14 +71,15 @@ console.log("append", resultsAppend.preciseWords);
 
 /**
  * A function to perform runtime analysis on a given function.
- * Results are agregated into an array (arrayOfResults).
+ * Results are aggregated into an array (arrayOfResults).
  * I like the verbose output of perf, the examples above only exposed the 'preciseWords' property and I find the values of the 'time' 
  * property very valuable for comparison.
  */
 
 let arrayOfResults = []
 
-// takes three parameters, a funtion, an array, and a string
+// takes three parameters, a function, an array, and a string
+// example: performAnalysis(doublerAppend, tinyArray, "tinyArray")
 const performAnalysis = (functionToTest, parameters, parameterName) => {
     perf.start() // start the timer
     functionToTest(parameters) // our parameters in action
@@ -143,7 +144,7 @@ const rl = readline.createInterface({
 })
 
 /**
- * This question gives the user an oportunity to export as CSV or exit
+ * This question gives the user an opportunity to export as CSV or exit
  */
 const firstQuestion = () => {
     rl.question(`Would you like to export these results as a CSV file? (y/n) `, (answer) => {
@@ -153,7 +154,7 @@ const firstQuestion = () => {
             console.log('exiting...')
             rl.close()
         } else {
-            console.log(`${answer} is giberish, mate. exiting...`)
+            console.log(`${answer} is gibberish, mate. exiting...`)
             rl.close()
         }
     })
@@ -162,7 +163,7 @@ const firstQuestion = () => {
 /**
  * This question enables the user to provide a filename for export and calls a function to convert an array of objects to CSV, then calls
  * another function to write that CSV to disk. 
- * User is also given the oportunity to exit.
+ * User is also given the opportunity to exit.
  */
 const secondQuestion = () => {
     rl.question("Give a name and path for the file. example: ./foo.csv or /dev/nul/foo.csv ", (fileName) => {
@@ -176,7 +177,7 @@ const secondQuestion = () => {
                 console.log('exiting...')
                 rl.close()
             } else {
-                console.log(`${answer} is giberish, mate. exiting...`)
+                console.log(`${answer} is gibberish, mate. exiting...`)
                 rl.close()
             }
         })
