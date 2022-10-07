@@ -9,10 +9,3 @@ Why would these methods that achieve the same result perform differently at scal
 Both functions add an element to an array. One function accomplishes this with the .push() method, while the other utilizes the .unshift() method. The difference in performance is cause by how each method performs it's task. The .push() method returns the last element of an array and appends the new element after the last element. The .unshift() method moves the entire array up one index and places the new element at the first array index. The process of .unshift() shifting the array requires more work, and as the array size increases, so does the time to do that work.
 
 The conclusion I present is runtime analysis can present a software developer with an understanding of which functions are performant and how functions and methods compare when presented with a benchmark workload.
-
-
-Space complexity of functions from code.js
-1) O(n^2)
-2) O(n^2)
-3) O(n)
-4) O(2n)
