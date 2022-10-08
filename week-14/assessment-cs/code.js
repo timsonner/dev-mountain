@@ -152,7 +152,7 @@ performAnalysis(findLongestWord, ['hi', 'hello'], `["hi", "hello"]`)
 // 1) O(n^2)
 // 2) O(n^2)
 // 3) O(n)
-// 4) O(2n)
+// 4) O(n)
 
 
 // Be sure to push your code to Github for this assignment!
