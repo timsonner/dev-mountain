@@ -10,6 +10,7 @@ import UIKit
 
 class ReminderListViewController: UICollectionViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, String>
     var dataSource: DataSource!
 
     override func viewDidLoad() {
@@ -35,6 +36,13 @@ class ReminderListViewController: UICollectionViewController {
             // Reusing cells allows your app to perform well even with a vast number of items
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
                 }
+        var snapshot = SnapShot()
+        // map(_:) returns a new array containing only the reminder titles, which populate as items in the snapshot
+        snapshot.appendSections([0])
+        snapshot.appendItems(Reminder.sampleData.map {$0.title})
+        dataSource.apply(snapshot)
+        // Point collection view to the data source
+        collectionView.dataSource = dataSource
     }
     
     private func listLayout() ->
