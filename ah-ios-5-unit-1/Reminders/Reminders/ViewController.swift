@@ -14,6 +14,15 @@ class ReminderListViewController: UICollectionViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    private func listLayout() ->
+    UICollectionViewCompositionalLayout {
+        // Create a list layout configuration.
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        // Assign values to layout configuration parameters.
+        listConfiguration.showsSeparators = false
+        listConfiguration.backgroundColor = .clear
+        // Create and return a compositional layout.
+        return UICollectionViewCompositionalLayout.list(using: listConfiguration)
+    }
 
 }
