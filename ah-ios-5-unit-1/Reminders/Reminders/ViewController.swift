@@ -16,6 +16,14 @@ class ReminderListViewController: UICollectionViewController {
         let listLayout = listLayout()
         // Asign list layout to collection view layout.
         collectionView.collectionViewLayout = listLayout
+        // Register cell
+        let cellRegistration = UICollectionView.CellRegistration {
+            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String ) in
+            let reminder = Reminder.sampleData[indexPath.item]
+            // Create content configuration
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = reminder.title
+        }
     }
     
     private func listLayout() ->
