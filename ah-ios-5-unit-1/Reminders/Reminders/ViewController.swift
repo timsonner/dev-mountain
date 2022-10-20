@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class ReminderListViewController: UICollectionViewController {
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    var dataSource: DataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +20,21 @@ class ReminderListViewController: UICollectionViewController {
         collectionView.collectionViewLayout = listLayout
         // Register cell
         let cellRegistration = UICollectionView.CellRegistration {
-            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String ) in
+            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
             let reminder = Reminder.sampleData[indexPath.item]
             // Create content configuration
             var contentConfiguration = cell.defaultContentConfiguration()
+            // Retrieve the reminder corresponding to the item
             contentConfiguration.text = reminder.title
+            // Asign content configuration to cell
+            cell.contentConfiguration = contentConfiguration
         }
+        // Initialize data source
+        // Pass a closure that configures and returns a cell for a collection view
+        dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
+            // Reusing cells allows your app to perform well even with a vast number of items
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+                }
     }
     
     private func listLayout() ->
@@ -36,5 +47,4 @@ class ReminderListViewController: UICollectionViewController {
         // Create and return a compositional layout.
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
-
 }
