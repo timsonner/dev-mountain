@@ -7,33 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BAF02112900F3C100343428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02102900F3C100343428 /* AppDelegate.swift */; };
-		2BAF02132900F3C100343428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02122900F3C100343428 /* SceneDelegate.swift */; };
-		2BAF02182900F3C100343428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF02162900F3C100343428 /* Main.storyboard */; };
-		2BAF021A2900F3C400343428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF02192900F3C400343428 /* Assets.xcassets */; };
-		2BAF021D2900F3C400343428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF021B2900F3C400343428 /* LaunchScreen.storyboard */; };
-		2BAF02262900FC7E00343428 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02252900FC7E00343428 /* Reminder.swift */; };
-		2BAF023E2901048300343428 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF023D2901048300343428 /* ReminderListViewController.swift */; };
-		2BAF02442902635D00343428 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02432902635D00343428 /* Date+Today.swift */; };
-		2BAF0247290289EA00343428 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF0246290289EA00343428 /* ReminderListViewController+DataSource.swift */; };
+		2BAF02552903A79D00343428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02542903A79D00343428 /* AppDelegate.swift */; };
+		2BAF02572903A79D00343428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02562903A79D00343428 /* SceneDelegate.swift */; };
+		2BAF02592903A79D00343428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF02582903A79D00343428 /* ViewController.swift */; };
+		2BAF025C2903A79D00343428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF025A2903A79D00343428 /* Main.storyboard */; };
+		2BAF025E2903A7A000343428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF025D2903A7A000343428 /* Assets.xcassets */; };
+		2BAF02612903A7A000343428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAF025F2903A7A000343428 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2BAF020D2900F3C100343428 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BAF02102900F3C100343428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BAF02122900F3C100343428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BAF02172900F3C100343428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2BAF02192900F3C400343428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2BAF021C2900F3C400343428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2BAF021E2900F3C400343428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAF02252900FC7E00343428 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
-		2BAF023D2901048300343428 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
-		2BAF02432902635D00343428 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
-		2BAF0246290289EA00343428 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
+		2BAF02512903A79D00343428 /* LandmarkTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAF02542903A79D00343428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BAF02562903A79D00343428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2BAF02582903A79D00343428 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BAF025B2903A79D00343428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BAF025D2903A7A000343428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BAF02602903A7A000343428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BAF02622903A7A000343428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2BAF020A2900F3C100343428 /* Frameworks */ = {
+		2BAF024E2903A79D00343428 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,91 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BAF02042900F3C100343428 = {
+		2BAF02482903A79D00343428 = {
 			isa = PBXGroup;
 			children = (
-				2BAF020F2900F3C100343428 /* Reminders */,
-				2BAF020E2900F3C100343428 /* Products */,
+				2BAF02532903A79D00343428 /* LandmarkTableView */,
+				2BAF02522903A79D00343428 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2BAF020E2900F3C100343428 /* Products */ = {
+		2BAF02522903A79D00343428 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BAF020D2900F3C100343428 /* Reminders.app */,
+				2BAF02512903A79D00343428 /* LandmarkTableView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BAF020F2900F3C100343428 /* Reminders */ = {
+		2BAF02532903A79D00343428 /* LandmarkTableView */ = {
 			isa = PBXGroup;
 			children = (
-				2BAF02242900FC2700343428 /* Models */,
-				2BAF02102900F3C100343428 /* AppDelegate.swift */,
-				2BAF02122900F3C100343428 /* SceneDelegate.swift */,
-				2BAF02162900F3C100343428 /* Main.storyboard */,
-				2BAF02192900F3C400343428 /* Assets.xcassets */,
-				2BAF021B2900F3C400343428 /* LaunchScreen.storyboard */,
-				2BAF021E2900F3C400343428 /* Info.plist */,
-				2BAF02452902899500343428 /* ListViewController */,
+				2BAF02542903A79D00343428 /* AppDelegate.swift */,
+				2BAF02562903A79D00343428 /* SceneDelegate.swift */,
+				2BAF02582903A79D00343428 /* ViewController.swift */,
+				2BAF025A2903A79D00343428 /* Main.storyboard */,
+				2BAF025D2903A7A000343428 /* Assets.xcassets */,
+				2BAF025F2903A7A000343428 /* LaunchScreen.storyboard */,
+				2BAF02622903A7A000343428 /* Info.plist */,
 			);
-			path = Reminders;
-			sourceTree = "<group>";
-		};
-		2BAF02242900FC2700343428 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2BAF02252900FC7E00343428 /* Reminder.swift */,
-				2BAF02432902635D00343428 /* Date+Today.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2BAF02452902899500343428 /* ListViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2BAF023D2901048300343428 /* ReminderListViewController.swift */,
-				2BAF0246290289EA00343428 /* ReminderListViewController+DataSource.swift */,
-			);
-			path = ListViewController;
+			path = LandmarkTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BAF020C2900F3C100343428 /* Reminders */ = {
+		2BAF02502903A79D00343428 /* LandmarkTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BAF02212900F3C400343428 /* Build configuration list for PBXNativeTarget "Reminders" */;
+			buildConfigurationList = 2BAF02652903A7A000343428 /* Build configuration list for PBXNativeTarget "LandmarkTableView" */;
 			buildPhases = (
-				2BAF02092900F3C100343428 /* Sources */,
-				2BAF020A2900F3C100343428 /* Frameworks */,
-				2BAF020B2900F3C100343428 /* Resources */,
+				2BAF024D2903A79D00343428 /* Sources */,
+				2BAF024E2903A79D00343428 /* Frameworks */,
+				2BAF024F2903A79D00343428 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Reminders;
-			productName = Reminders;
-			productReference = 2BAF020D2900F3C100343428 /* Reminders.app */;
+			name = LandmarkTableView;
+			productName = LandmarkTableView;
+			productReference = 2BAF02512903A79D00343428 /* LandmarkTableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2BAF02052900F3C100343428 /* Project object */ = {
+		2BAF02492903A79D00343428 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					2BAF020C2900F3C100343428 = {
+					2BAF02502903A79D00343428 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = 2BAF02082900F3C100343428 /* Build configuration list for PBXProject "Reminders" */;
+			buildConfigurationList = 2BAF024C2903A79D00343428 /* Build configuration list for PBXProject "LandmarkTableView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,58 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 2BAF02042900F3C100343428;
-			productRefGroup = 2BAF020E2900F3C100343428 /* Products */;
+			mainGroup = 2BAF02482903A79D00343428;
+			productRefGroup = 2BAF02522903A79D00343428 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BAF020C2900F3C100343428 /* Reminders */,
+				2BAF02502903A79D00343428 /* LandmarkTableView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2BAF020B2900F3C100343428 /* Resources */ = {
+		2BAF024F2903A79D00343428 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAF021D2900F3C400343428 /* LaunchScreen.storyboard in Resources */,
-				2BAF021A2900F3C400343428 /* Assets.xcassets in Resources */,
-				2BAF02182900F3C100343428 /* Main.storyboard in Resources */,
+				2BAF02612903A7A000343428 /* LaunchScreen.storyboard in Resources */,
+				2BAF025E2903A7A000343428 /* Assets.xcassets in Resources */,
+				2BAF025C2903A79D00343428 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2BAF02092900F3C100343428 /* Sources */ = {
+		2BAF024D2903A79D00343428 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAF02262900FC7E00343428 /* Reminder.swift in Sources */,
-				2BAF02442902635D00343428 /* Date+Today.swift in Sources */,
-				2BAF02112900F3C100343428 /* AppDelegate.swift in Sources */,
-				2BAF023E2901048300343428 /* ReminderListViewController.swift in Sources */,
-				2BAF02132900F3C100343428 /* SceneDelegate.swift in Sources */,
-				2BAF0247290289EA00343428 /* ReminderListViewController+DataSource.swift in Sources */,
+				2BAF02592903A79D00343428 /* ViewController.swift in Sources */,
+				2BAF02552903A79D00343428 /* AppDelegate.swift in Sources */,
+				2BAF02572903A79D00343428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2BAF02162900F3C100343428 /* Main.storyboard */ = {
+		2BAF025A2903A79D00343428 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2BAF02172900F3C100343428 /* Base */,
+				2BAF025B2903A79D00343428 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2BAF021B2900F3C400343428 /* LaunchScreen.storyboard */ = {
+		2BAF025F2903A7A000343428 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2BAF021C2900F3C400343428 /* Base */,
+				2BAF02602903A7A000343428 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -194,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2BAF021F2900F3C400343428 /* Debug */ = {
+		2BAF02632903A7A000343428 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		2BAF02202900F3C400343428 /* Release */ = {
+		2BAF02642903A7A000343428 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,7 +280,7 @@
 			};
 			name = Release;
 		};
-		2BAF02222900F3C400343428 /* Debug */ = {
+		2BAF02662903A7A000343428 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,7 +289,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MUV3A7R788;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reminders/Info.plist;
+				INFOPLIST_FILE = LandmarkTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +300,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsonner.Reminders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsonner.LandmarkTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,7 +308,7 @@
 			};
 			name = Debug;
 		};
-		2BAF02232900F3C400343428 /* Release */ = {
+		2BAF02672903A7A000343428 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -345,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MUV3A7R788;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reminders/Info.plist;
+				INFOPLIST_FILE = LandmarkTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsonner.Reminders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsonner.LandmarkTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,25 +339,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BAF02082900F3C100343428 /* Build configuration list for PBXProject "Reminders" */ = {
+		2BAF024C2903A79D00343428 /* Build configuration list for PBXProject "LandmarkTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BAF021F2900F3C400343428 /* Debug */,
-				2BAF02202900F3C400343428 /* Release */,
+				2BAF02632903A7A000343428 /* Debug */,
+				2BAF02642903A7A000343428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BAF02212900F3C400343428 /* Build configuration list for PBXNativeTarget "Reminders" */ = {
+		2BAF02652903A7A000343428 /* Build configuration list for PBXNativeTarget "LandmarkTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BAF02222900F3C400343428 /* Debug */,
-				2BAF02232900F3C400343428 /* Release */,
+				2BAF02662903A7A000343428 /* Debug */,
+				2BAF02672903A7A000343428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2BAF02052900F3C100343428 /* Project object */;
+	rootObject = 2BAF02492903A79D00343428 /* Project object */;
 }
